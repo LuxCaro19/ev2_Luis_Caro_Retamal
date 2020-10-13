@@ -10,7 +10,7 @@ export default{
 
         <input id="peso" type="number"/>
         <br>
-        <input id="dolar" type="radio" name="option" value=dolar/>a Dolar
+        <input id="dolar" type="radio" name="option" value="dolar"/>a Dolar
         <input id="uf" type="radio" name="option" value="uf"/>a UF
         <input id="euro" type="radio" name="option" value="euro"/>a Euro
         <button onclick="calcular()">Calcular</button>
@@ -28,10 +28,53 @@ export default{
 
     calcular:function(){
 
-        var valor = document.getElementById("peso");
+        var valor = document.getElementById("peso").value;
         var resp = document.getElementById("resp");
+        var option = document.getElementsByName("option");
 
-        resp.innerHTML= valor.value;
+        var checked="";
+        var calculo=0;
+        
+
+        option.forEach((item)=>{
+            
+            if(item.checked){
+                
+                checked=item.value;
+
+                
+                
+
+            }
+
+        });
+
+
+        
+        
+
+       if (checked=="dolar"){
+
+
+            calculo=valor*2;
+            resp.innerHTML=calculo;
+
+        }else if(checked=="uf"){
+
+            calculo=valor*4;
+            resp.innerHTML=calculo;
+
+        }else if(checked=="euro"){
+
+            calculo=valor*6;
+            resp.innerHTML=calculo;
+
+        }
+
+        
+
+
+        
 
 
 
