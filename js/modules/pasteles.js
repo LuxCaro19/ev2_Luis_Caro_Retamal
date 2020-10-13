@@ -34,6 +34,13 @@ export default{
         cargar:function(){
 
             var resp = document.getElementById("tabla");
+
+            var totalIndividual =0;
+            var subTotal=0;
+            var totalFinal=0;
+            var iva=0;
+
+
             var tabla= `
 
                 <table>
@@ -49,11 +56,16 @@ export default{
                     </tr>
  
 
-                </table>
+                
             
             `;
 
             this.factura.detalle.forEach(item =>{
+
+                totalIndividual=item.cantidad*item.precioUnitario;
+                subTotal=totalIndividual+subTotal;
+                
+
 
                 tabla += `
                 <tr>
@@ -62,7 +74,7 @@ export default{
                     <td>${item.cantidad}</td>
                     <td>${item.descripcion}</td>
                     <td>${item.precioUnitario}</td>
-                    <td>${item.precioUnitario}</td>
+                    <td>${totalIndividual}</td>
 
                 </tr>
                 
@@ -70,7 +82,36 @@ export default{
 
             });
 
-            tabla +='</table>';
+            iva=subTotal*0.19;
+            totalFinal=subTotal+iva;
+
+            tabla +=`
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Subtotal:</td>
+                    <td>${subTotal}</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>IVA:</td>
+                    <td>${iva}</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total:</td>
+                    <td>${totalFinal}</td>
+                </tr>
+                
+                
+                </table>`;
 
             resp.innerHTML=tabla;
 
