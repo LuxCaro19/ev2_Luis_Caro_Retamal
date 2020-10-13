@@ -20,6 +20,7 @@ export default{
             <div id="info" class="info">
 
 
+
             </div>
 
             <div id="tabla">
@@ -34,12 +35,23 @@ export default{
         cargar:function(){
 
             var resp = document.getElementById("tabla");
+            var info = document.getElementById("info");
+
+            var fact=`
+
+            <p>CLIENTE: ${this.factura.cliente}</p>
+            <p>DIRECCIÓN: ${this.factura.domicilio}</p>
+            <p>CIUDAD: ${this.factura.ciudad}</p>
+            <p>TELEFONO: ${this.factura.telefono}</p>
+            `;
+
+            info.innerHTML=fact;
+
 
             var totalIndividual =0;
             var subTotal=0;
             var totalFinal=0;
             var iva=0;
-
 
             var tabla= `
 
@@ -59,6 +71,8 @@ export default{
                 
             
             `;
+
+
 
             this.factura.detalle.forEach(item =>{
 
