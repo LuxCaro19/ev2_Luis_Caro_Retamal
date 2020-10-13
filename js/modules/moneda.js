@@ -56,20 +56,24 @@ export default{
        if (checked=="dolar"){
 
 
-            calculo=valor*2;
+            calculo=valor/628.68;
             resp.innerHTML=calculo;
 
         }else if(checked=="uf"){
 
-            calculo=valor*4;
+            calculo=valor/26648.67;
             resp.innerHTML=calculo;
 
         }else if(checked=="euro"){
 
-            calculo=valor*6;
+            calculo=valor/740.67;
             resp.innerHTML=calculo;
 
         }
+
+
+
+        
 
         
 
