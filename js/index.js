@@ -1,10 +1,14 @@
 
+import moneda from "./modules/moneda.js"
 
+var container = document.getElementById("forms");
+
+window.calcular = moneda.calcular;
 
 
 document.getElementById("moneda").addEventListener("click", ()=>{
 
-
+    container.innerHTML = moneda.data;
 
 });
 
