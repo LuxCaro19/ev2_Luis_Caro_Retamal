@@ -1,5 +1,6 @@
 
 import moneda from "./modules/moneda.js"
+import pasteles from "./modules/pasteles.js"
 
 var container = document.getElementById("forms");
 
@@ -15,6 +16,8 @@ document.getElementById("moneda").addEventListener("click", ()=>{
 
 document.getElementById("pasteles").addEventListener("click", ()=>{
 
+    container.innerHTML = pasteles.data;
+    pasteles.cargar();
 
 
 });

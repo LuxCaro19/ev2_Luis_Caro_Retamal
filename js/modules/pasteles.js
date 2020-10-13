@@ -13,12 +13,68 @@ export default{
         {codigo:6,cantidad:3,descripcion:'PASTEL CREMA', precioUnitario:13000}   ] },
 
     
-        data: html`
+        data: `
 
             <h2>autor: Luis Caro Retamal</h2>
+
+            <div id="info" class="info">
+
+
+            </div>
+
+            <div id="tabla">
+
+
+            </div>
+
+
         
-        
-        `
+        `,
+
+        cargar:function(){
+
+            var resp = document.getElementById("tabla");
+            var tabla= `
+
+                <table>
+
+                    <tr>
+
+                        <th>codigo</th>
+                        <th>cantidad</th>
+                        <th>descripcion</th>
+                        <th>precio unitario</th>
+                        <th>total</th>
+
+                    </tr>
+ 
+
+                </table>
+            
+            `;
+
+            this.factura.detalle.forEach(item =>{
+
+                tabla += `
+                <tr>
+
+                    <td>${item.codigo}</td>
+                    <td>${item.cantidad}</td>
+                    <td>${item.descripcion}</td>
+                    <td>${item.precioUnitario}</td>
+                    <td>${item.precioUnitario}</td>
+
+                </tr>
+                
+                `
+
+            });
+
+            tabla +='</table>';
+
+            resp.innerHTML=tabla;
+
+        }
 
 
 }
