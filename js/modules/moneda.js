@@ -17,11 +17,15 @@ export default{
 
         <input id="peso" type="number"/>
         <br>
-        <input id="dolar" type="radio" name="option" value="dolar"/>a Dolar
-        <input id="uf" type="radio" name="option" value="uf"/>a UF
-        <input id="euro" type="radio" name="option" value="euro"/>a Euro
-        <button onclick="calcular()">Calcular</button>
+        <div class="opciones">
+            <input id="dolar" type="radio" name="option" value="dolar"/><p>a Dolar</p>
+            <input id="uf" type="radio" name="option" value="uf"/><p>a UF</p>
+            <input id="euro" type="radio" name="option" value="euro"/><p>a Euro</p>
 
+        </div>
+        
+        <button onclick="calcular()">Calcular</button>
+        
 
 
         <div id="resp" class="respuesta">

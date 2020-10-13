@@ -23,7 +23,7 @@ export default{
 
             </div>
 
-            <div id="tabla">
+            <div id="tabla" class="tabla">
 
 
             </div>

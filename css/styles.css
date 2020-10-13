@@ -1,0 +1,141 @@
+body{
+
+    background-color: aquamarine;
+
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(3, 102, 102, 0.849);
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 8px 8px 0px rgb(29, 28, 28);
+}
+
+
+
+.header h1{
+
+    font-family: 'Piedra', cursive;
+    color: white;
+}
+
+.header h3 a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menu ul li {
+
+    font-family: 'Indie Flower', cursive;
+    list-style-type: none;
+    
+}
+
+.menu ul li a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: white;
+}
+
+.formularios{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgba(255, 255, 255, 0.664);
+
+
+}
+
+.formularios input{
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+}
+
+.formularios h2{
+
+    font-family: 'Piedra', cursive;
+    color: rgba(42, 90, 83, 0.836);
+
+
+}
+
+.formularios p{
+
+    font-family: 'Indie Flower', cursive;
+}
+
+.formularios button{
+
+    background-color: teal;
+    border: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+    font-family: 'Indie Flower', cursive;
+    color: white;
+
+
+}
+
+.opciones{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.info{
+
+    background-color: rgba(154, 212, 223, 0.747);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 30px;
+
+}
+
+.tabla{
+
+    
+    background-color: rgba(151, 212, 204, 0.767);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(105, 167, 124);
+
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.tabla table{
+
+    width: 700px;
+    text-align: center;
+
+
+}
+
+
