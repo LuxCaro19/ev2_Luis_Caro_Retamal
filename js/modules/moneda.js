@@ -1,5 +1,12 @@
 export default{
 
+    valores: 
+    {
+        dolar:628.68, 
+        uf:26648.67, 
+        euro:740.67
+    
+    } ,
 
     data: `
 
@@ -32,15 +39,17 @@ export default{
         var resp = document.getElementById("resp");
         var option = document.getElementsByName("option");
 
-        var checked="";
+        var checkeded="";
         var calculo=0;
+
+        var respuesta="";
         
 
         option.forEach((item)=>{
             
             if(item.checked){
                 
-                checked=item.value;
+                checkeded=item.value;
 
                 
                 
@@ -51,25 +60,52 @@ export default{
 
 
         
-        
+        if(valor==""){
 
-       if (checked=="dolar"){
+            alert("llene el campo");
 
+        }else if(valor<0){
 
+            alert("ingrese valores mayores")
+
+        }else if (checkeded=="dolar"){
+
+            //this.valores.dolar  no funciona
             calculo=valor/628.68;
-            resp.innerHTML=calculo;
+            
 
-        }else if(checked=="uf"){
+            respuesta+=`
+            
+            <p>Usted conseguiría $ ${calculo.toFixed()} dolares</p>
+            
+            `;
+
+
+        }else if(checkeded=="uf"){
 
             calculo=valor/26648.67;
-            resp.innerHTML=calculo;
 
-        }else if(checked=="euro"){
+            respuesta+=`
+            
+            <p>Usted conseguiría ${calculo.toFixed()} UF </p>
+            
+            `;
+            
+        }else if(checkeded=="euro"){
 
             calculo=valor/740.67;
-            resp.innerHTML=calculo;
+
+            respuesta+=`
+            
+            <p>Usted conseguiría € ${calculo.toFixed()} Euros </p>
+            
+            `;
 
         }
+
+        resp.innerHTML= respuesta;
+
+        
 
 
 
